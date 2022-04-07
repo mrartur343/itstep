@@ -57,4 +57,4 @@ for year in range(150):
             break
         nick.live(day)
 if nick.alive == True:
-    print("Собачка прожила 150 років о_0")
+    print('Собачка прожила 150 років о_0')
