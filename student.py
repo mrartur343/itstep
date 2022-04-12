@@ -21,7 +21,7 @@ class Student:
         print("Time to work")
         self.cash += 5
         self.gladness -= 3
-        self.study -= 0.5
+        self.study -= 0.05
 
     def to_buy(self):
         print("Buy book!")
@@ -51,12 +51,13 @@ class Student:
     def end_of_day(self):
         print(f"Gladness={self.gladness}")
         print(f"Study={round(self.study,2)}")
+        print(f"Cash={round(self.cash,2)} гривень")
 
     def live(self, day):
         day = "Day " + str(day) + ' (year ' + str(
             year) + ") of " + self.name + "file"
         print(f"{day:=^55}")
-        live_cube = random.randint(1, 4)
+        live_cube = random.randint(1, 5)
         if live_cube == 1:
             self.to_study()
         elif live_cube == 2:
@@ -65,6 +66,8 @@ class Student:
             self.to_chill()
         elif live_cube == 4:
             self.to_buy()
+        elif live_cube == 5:
+            self.to_work()
         self.end_of_day()
         self.is_alive()
 
