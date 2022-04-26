@@ -1,20 +1,21 @@
 #Slava Ukraini, geroiam slava
 
 
-class Display:
+class A:
     def display(self):
         self.var = 20
-class Computer:
+class B:
     def calculate(self):
         self.var = 10
 
 
 
-class SmartPhone(Display, Computer):
+class AB(A, B):
     def test(self):
         print(self.var)
 
-iphone = SmartPhone()
-iphone.calculate()
-iphone.display()
-iphone.test()
+result = AB()
+
+result.calculate()
+result.display()
+result.test()
